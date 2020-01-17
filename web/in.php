@@ -15,7 +15,7 @@ $resultuser = $statementuser->fetchAll();
 
 if ($result = $resultuser){
   echo 'Sie werden weitergeleitet, falls dies nicht der Fall sein sollte klicken Sie <a href="privat.php">HIER</a>';
-  header('Refresh: 2; URL=privat.php');
+  header('Refresh: 0; URL=privat.php');
 }
 else {
   echo 'A MISTAKE OCCURRED';

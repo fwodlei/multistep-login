@@ -13,6 +13,7 @@ session_start();
 
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
       $_SESSION['userid'] = $user['id'];
+      header('Refresh: 1; URL=in.php');
       die('Login erfolgreich. Weiter zu <a href="in.php">internen Bereich</a>');
     }
       else {
