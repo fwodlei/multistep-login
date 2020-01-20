@@ -74,7 +74,13 @@ if (isset($_GET['register'])) {
     } else {
       echo 'Beim Abspeichern ist leider ein Fehler aufgetreten';
     }
-    if ($_SESSION['login']) {
+if ($_SESSION['login']) {
+
+     $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+     $result = $statement->execute(array('email' => $email));
+     $user = $statement->fetch();
+     $_SESSION['userid'] = $user['id'];
+
       echo 'Sie werden weitergeleitet, falls dies nicht der Fall sein sollte klicken Sie <a href="in.php">HIER</a>';
       header('Refresh: 2; URL=in.php');
     }

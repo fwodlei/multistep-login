@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec2765c-376f-4c67-a2c4-028ff6528fe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stepbystep_2020-01-16.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/privat.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/privat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/in.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/in.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/privat.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/private.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,7 @@
       <workItem from="1579100382827" duration="7008000" />
       <workItem from="1579167212661" duration="23820000" />
       <workItem from="1579510147552" duration="1282000" />
-      <workItem from="1579511510469" duration="5413000" />
+      <workItem from="1579511510469" duration="8893000" />
     </task>
     <servers />
   </component>

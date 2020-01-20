@@ -13,6 +13,7 @@ session_start();
   $vorname = $result[0]['vorname'];
   $nachname = $result[0]['nachname'];
   $info = $result[0]['info'];
+
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +45,7 @@ session_start();
 
 <a href="logout.php">LOGOUT</a>
 <a href="delete.php">DELETE</a>
+<a href="form.php">FORM</a>
 
 </body>
 </html>

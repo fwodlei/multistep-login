@@ -13,9 +13,10 @@ $statementuser = $pdo->prepare("SELECT id FROM users");
 $resultuser = $statementuser->execute(array(':id' => $id));
 $resultuser = $statementuser->fetchAll();
 
+
 if ($result = $resultuser){
-  echo 'Sie werden weitergeleitet, falls dies nicht der Fall sein sollte klicken Sie <a href="privat.php">HIER</a>';
-  header('Refresh: 0; URL=privat.php');
+  echo 'Sie werden weitergeleitet, falls dies nicht der Fall sein sollte klicken Sie <a href="private.php">HIER</a>';
+  header('Refresh: 0; URL=private.php');
 }
 else {
   echo 'A MISTAKE OCCURRED';

@@ -9,7 +9,7 @@ $statement->execute(array(1));
 
   echo 'Daten erfolgreich gelöscht';
   echo '</br></br>';
-  echo '<a href="privat.php">Zurück zum privaten Bereich.</a>';
+  echo '<a href="private.php">Zurück zum privaten Bereich.</a>';
 
 
 
