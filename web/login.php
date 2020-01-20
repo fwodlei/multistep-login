@@ -29,7 +29,6 @@ session_start();
 <head>
   <title>Login</title>
 </head>
-<body>
 
 <?php
 if(isset($errorMessage)) {
@@ -46,5 +45,8 @@ if(isset($errorMessage)) {
 
   <input type="submit" value="Abschicken">
 </form>
+</br></br>
+<a href="register.php"> Registrieren</a>
+
 </body>
 </html>
