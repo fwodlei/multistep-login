@@ -46,6 +46,5 @@ if(isset($errorMessage)) {
 
   <input type="submit" value="Abschicken">
 </form>
-<a href="logout.php">Logout</a>
 </body>
 </html>

@@ -5,10 +5,7 @@ session_start();
   $id = 0;
   $u_id = $_SESSION['userid'];
 
-  $statement = $pdo->prepare("
-SELECT email, nachname, vorname, info
-FROM info
-WHERE u_id=' " . $u_id . " ' ");
+  $statement = $pdo->prepare("SELECT email, nachname, vorname, info FROM info WHERE u_id=' " . $u_id . " ' ");
   $result = $statement->execute(array('id' => $id));
   $result = $statement->fetchAll();
 
@@ -46,6 +43,7 @@ WHERE u_id=' " . $u_id . " ' ");
 </table>
 
 <a href="logout.php">LOGOUT</a>
+<a href="delete.php">DELETE</a>
 
 </body>
 </html>

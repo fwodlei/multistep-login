@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec2765c-376f-4c67-a2c4-028ff6528fe9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stepbystep_2020-01-16.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/privat.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/privat.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +27,11 @@
   <component name="PhpServers">
     <servers>
       <server host="stepbystep.test" id="ad3c9fca-7b0c-4290-934d-428b2c24367c" name="stepbystep.test" />
+      <server host="multistepform.test" id="ebf9a037-d9bb-4861-ad1e-6af830f2c058" name="multistepform.test" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/web" remote-root="/Users/loom20/Sites/multistepform/web" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
   <component name="ProjectId" id="1WR76yodW0YP6Cg6PiDcHogAttP" />
@@ -35,7 +45,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.MySQL" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,6 +59,9 @@
       </list>
     </option>
   </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -60,7 +73,9 @@
       <option name="presentableId" value="Default" />
       <updated>1579100381342</updated>
       <workItem from="1579100382827" duration="7008000" />
-      <workItem from="1579167212661" duration="23702000" />
+      <workItem from="1579167212661" duration="23820000" />
+      <workItem from="1579510147552" duration="1282000" />
+      <workItem from="1579511510469" duration="5413000" />
     </task>
     <servers />
   </component>
@@ -72,7 +87,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
