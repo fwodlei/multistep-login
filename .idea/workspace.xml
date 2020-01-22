@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec2765c-376f-4c67-a2c4-028ff6528fe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/addentry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/styles/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/form.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/private.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/private.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +21,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +48,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +86,9 @@
       <workItem from="1579100382827" duration="7008000" />
       <workItem from="1579167212661" duration="23820000" />
       <workItem from="1579510147552" duration="1282000" />
-      <workItem from="1579511510469" duration="21384000" />
+      <workItem from="1579511510469" duration="22144000" />
+      <workItem from="1579593444458" duration="21562000" />
+      <workItem from="1579680553733" duration="19287000" />
     </task>
     <servers />
   </component>
@@ -95,21 +107,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/web/delete.php</url>
-          <line>9</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/web/delete.php</url>
-          <line>5</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

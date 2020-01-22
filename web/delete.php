@@ -2,20 +2,16 @@
   session_start();
 
   $u_id = $_SESSION['userid'];
+  $id = ($_POST['id']);
 
-  if ($u_id == 53) {
+  if ($u_id != 53) {
     $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
-    $statement = $pdo->prepare("UPDATE info SET email = DEFAULT, vorname = DEFAULT, nachname = DEFAULT, info = DEFAULT");
+    $statement = $pdo->prepare("DELETE FROM info WHERE u_id = $u_id AND id = $id");
     $statement->execute(array(1));
-  } elseif ($u_id != 53) {
+  } elseif ($u_id = 53){
     $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
-    $statement = $pdo->prepare("UPDATE info SET email = DEFAULT, vorname = DEFAULT, nachname = DEFAULT, info = DEFAULT WHERE u_id = $u_id ");
+    $statement = $pdo->prepare("DELETE FROM info WHERE id = $id ");
     $statement->execute(array(1));
   }
 
-  echo 'Daten erfolgreich gelöscht';
-  echo '</br></br>';
-  echo '<a href="private.php">Zurück zum privaten Bereich.</a>';
-
-
-
+  echo '<a href="private.php">Zurück in den privaten Bereich</a>';

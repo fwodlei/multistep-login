@@ -9,7 +9,8 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registrierung</title>
+    <title>Registrierung</title>
+    <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
 
@@ -55,15 +56,11 @@ if (isset($_GET['register'])) {
 
   if (!$error) {
     $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
-    $statement = $pdo->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'stepbystep' AND TABLE_NAME = 'users';");
     $statement->execute();
     $current_auto_increment = $statement->fetch();
 
     $statement = $pdo->prepare('INSERT INTO users (email, passwort) VALUES (:email, :passwort)');
     $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
-
-    $statement = $pdo->prepare('INSERT INTO info (u_id) VALUES (:u_id)');
-    $result = $statement->execute(array('u_id' => $current_auto_increment['AUTO_INCREMENT']));
 
     if ($result) {
       $showFormular = FALSE;
@@ -89,19 +86,31 @@ if ($_SESSION['login']) {
 
 if ($showFormular) {
   ?>
+    <div class="main">
+        <div class="actions-box">
+            <div class="actions-box__left">
 
-      <form action="?register=1" method="post" style="margin: 100px 42.5%">
-        E-Mail:<br>
-        <input type="email" size="40" maxlength="250" name="email"><br><br>
-        Dein Passwort:<br>
-        <input type="password" size="40" maxlength="250" name="passwort"><br>
-        Passwort wiederholen:<br>
-        <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
-
-        <input type="submit" value="Abschicken">
-      </br></br>
-          <a href="login.php">LOGIN</a>
-      </form>
+            </div>
+            <div class="actions-box__right">
+                <form class="actions-box__form" action="?register=1" method="post">
+                    <div class="actions-box__inputs">
+                    <div class="actions-box__login">
+                        <span class="actions-box__label">Email:</span>
+                        <input type="email" size="40" maxlength="250" name="email" class="actions-box__text-input">
+                    </div>
+                    <div class="actions-box__password">
+                        <span class="actions-box__label">Password:</span>
+                        <input type="password" size="40" maxlength="250" name="passwort" class="actions-box__text-input">
+                    </div>
+                    <div class="actions-box__password">
+                        <span class="actions-box__label">Repeat Password:</span>
+                        <input type="password" size="40" maxlength="250" name="passwort2" class="actions-box__text-input">
+                    </div>
+                <input type="submit" value="Abschicken">
+                        <a href="login.php"><input type="button" value="Zum Login"></a>
+            </form>
+        </div>
+    </div>
 
       <?php
     }
