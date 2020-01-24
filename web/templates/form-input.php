@@ -1,0 +1,1 @@
+<input type="<?php print $vars['type'] ?>" name="<?php print $vars['name'] ?>" placeholder="<?php print $vars['placeholder'] ?>">

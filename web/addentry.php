@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+require_once('main.php');
+
+template_load('', '');
+
 $u_id = $_SESSION['userid'];
 $a = 0;
 
@@ -54,7 +58,6 @@ if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
   $eintrag = "UPDATE info SET email='" . $filtered_array['email'] . "', vorname='" . $filtered_array['vorname'] . "', nachname='" . $filtered_array['name'] . "', info='" . $filtered_array['info'] . "' WHERE id = " . $id['id'];
   mysqli_query($db, $eintrag);
   mysqli_close($db);
-  print_r($eintrag);
 }
 
 if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
@@ -67,47 +70,15 @@ if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
   unset( $_SESSION['id']);
 }
 
+$addentry = template_load('templates/register.php',[]);
+print template_load('templates/html.php',[
+    'body' => template_load('templates/page.php',[
+      'content' => $addentry,
+    ]),
+    'pagetitle' => 'Eintrag hinufügen',
+  ]
+);
 
-
-?>
-
-  <!DOCTYPE html>
-  <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multistepform</title>
-  </head>
-  <body>
-
-  <?php if (empty($_SESSION['step-1']) ): ?>
-    <div class="step-1">
-      <form action="./addentry.php" method="post">
-        <input name="name" placeholder="Name" type="text">
-        <input name="vorname" placeholder="Vorname" type="text">
-        <input name="email" placeholder="Email" type="email">
-        <input name="step-1" type="submit">
-        <a href="private.php">Zurück zum privaten Bereich.</a>
-      </form>
-    </div>
-  <?php endif; ?>
-
-  <?php if (empty($_SESSION['step-2']) && ! empty($_SESSION['step-1'])): ?>
-    <div class="step-2">
-      <form action="./addentry.php" method="post">
-        <select name="info">
-          <option name="Party">Party</option>
-          <option name="Arbeit">Arbeit</option>
-          <option name="Kirche">Kirche</option>
-        </select>
-        <input name="step-2" type="submit">
-      </form>
-    </div>
-  <?php endif; ?>
-  </body>
-  </html>
-
-<?php
 
 if(isset($_GET['d'])){
   unset( $_SESSION['name']);
@@ -118,4 +89,4 @@ if(isset($_GET['d'])){
   unset( $_SESSION['step-2']);
   unset( $_SESSION['id']);
 }
-?>
+

@@ -1,4 +1,7 @@
 <?php
+
+  require_once('main.php');
+
   session_start();
 
   $u_id = $_SESSION['userid'];
@@ -14,4 +17,4 @@
     $statement->execute(array(1));
   }
 
-  echo '<a href="private.php">Zurück in den privaten Bereich</a>';
+  echo'<a href="private.php">Zurück in den privaten Bereich</a>';

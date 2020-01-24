@@ -1,21 +1,11 @@
 <?php
 
+require_once('main.php');
+
 use Couchbase\PasswordAuthenticator;
 
 session_start();
   $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registrierung</title>
-    <link rel="stylesheet" href="styles/register.css">
-</head>
-<body>
-
-<?php
-
 
 $showFormular = TRUE;
 
@@ -26,17 +16,17 @@ if (isset($_GET['register'])) {
   $passwort2 = $_POST['passwort2'];
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo 'Bitte geben Sie eine gültige Email an';
+    echo'Bitte geben Sie eine gültige Email an';
     $error = TRUE;
   }
 
   if (strlen($passwort) == 0) {
-    echo 'Geben Sie ein Passwort ein';
+    echo'Geben Sie ein Passwort ein';
     $error = TRUE;
   }
 
   if ($passwort != $passwort2) {
-    echo 'Die Passwörter müssen überstimmen';
+    echo'Die Passwörter müssen überstimmen';
     $error = TRUE;
   }
 
@@ -50,8 +40,6 @@ if (isset($_GET['register'])) {
       echo 'Diese E-Mail ist bereits vergeben';
       $error = TRUE;
     }
-
-
   }
 
   if (!$error) {
@@ -85,35 +73,14 @@ if ($_SESSION['login']) {
 }
 
 if ($showFormular) {
-  ?>
-    <div class="main">
-        <div class="actions-box">
-            <div class="actions-box__left">
 
-            </div>
-            <div class="actions-box__right">
-                <form class="actions-box__form" action="?register=1" method="post">
-                    <div class="actions-box__inputs">
-                    <div class="actions-box__login">
-                        <span class="actions-box__label">Email:</span>
-                        <input type="email" size="40" maxlength="250" name="email" class="actions-box__text-input">
-                    </div>
-                    <div class="actions-box__password">
-                        <span class="actions-box__label">Password:</span>
-                        <input type="password" size="40" maxlength="250" name="passwort" class="actions-box__text-input">
-                    </div>
-                    <div class="actions-box__password">
-                        <span class="actions-box__label">Repeat Password:</span>
-                        <input type="password" size="40" maxlength="250" name="passwort2" class="actions-box__text-input">
-                    </div>
-                <input type="submit" value="Abschicken">
-                        <a href="login.php"><input type="button" value="Zum Login"></a>
-            </form>
-        </div>
-    </div>
+  $register = template_load('templates/register.php', '');
 
-      <?php
-    }
-    ?>
-</body>
-</html>
+  print template_load('templates/html.php',[
+      'body' => template_load('templates/page.php',[
+        'content' => $register,
+      ]),
+      'pagetitle' => 'Register',
+    ]
+  );
+}
