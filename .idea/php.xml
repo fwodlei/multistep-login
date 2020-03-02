@@ -3,6 +3,8 @@
   <component name="PhpStepFilterConfiguration">
     <skipped_functions>
       <skipped_function name="db_selects" />
+      <skipped_function name="system_user" />
+      <skipped_function name="comma_changer" />
     </skipped_functions>
   </component>
 </project>

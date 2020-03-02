@@ -1,20 +1,22 @@
 <?php
 
-  require_once('main.php');
+require_once('main.php');
 
-  session_start();
+system_init();
 
-  $u_id = $_SESSION['userid'];
-  $id = ($_POST['id']);
+session_start();
 
-  if ($u_id != 53) {
-    $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
-    $statement = $pdo->prepare("DELETE FROM info WHERE u_id = $u_id AND id = $id");
-    $statement->execute(array(1));
-  } elseif ($u_id = 53){
-    $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
-    $statement = $pdo->prepare("DELETE FROM info WHERE id = $id ");
-    $statement->execute(array(1));
-  }
+$u_id = $_SESSION['userid'];
+$id = ($_POST['id']);
 
-  echo'<a href="private.php">Zurück in den privaten Bereich</a>';
+if ($u_id != 53) {
+  $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
+  $statement = $pdo->prepare("DELETE FROM info WHERE u_id = $u_id AND id = $id");
+  $statement->execute(array(1));
+} elseif ($u_id = 53) {
+  $pdo = new PDO('mysql:host=localhost;dbname=stepbystep', 'root', '');
+  $statement = $pdo->prepare("DELETE FROM info WHERE id = $id ");
+  $statement->execute(array(1));
+}
+
+echo '<a href="private.php">Zurück in den privaten Bereich</a>';
