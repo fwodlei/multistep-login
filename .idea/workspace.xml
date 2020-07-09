@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fec2765c-376f-4c67-a2c4-028ff6528fe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/addentry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/styles/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/private.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/private.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="stepbystep" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hallo" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9001" listening_started="true" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/main.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9001" notify_if_session_was_finished_without_being_paused="false" show_user_defined_constants="false" />
   <component name="PhpServers">
     <servers>
       <server host="stepbystep.test" id="ad3c9fca-7b0c-4290-934d-428b2c24367c" name="stepbystep.test" />
@@ -41,11 +49,18 @@
           <mapping local-root="$PROJECT_DIR$/web" remote-root="/Users/loom20/Sites/multistepform/web" />
         </path_mappings>
       </server>
+      <server host="localhost" id="0869640c-740a-4092-aae4-52a33ea4fac9" name="localhost" />
     </servers>
   </component>
   <component name="ProjectId" id="1WR76yodW0YP6Cg6PiDcHogAttP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -56,22 +71,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.MySQL" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -88,24 +89,117 @@
       <workItem from="1579510147552" duration="1282000" />
       <workItem from="1579511510469" duration="22144000" />
       <workItem from="1579593444458" duration="21562000" />
-      <workItem from="1579680553733" duration="19287000" />
+      <workItem from="1579680553733" duration="22445000" />
+      <workItem from="1579771055103" duration="10450000" />
+      <workItem from="1579785902539" duration="11722000" />
+      <workItem from="1579856909134" duration="17548000" />
+      <workItem from="1581324368763" duration="144000" />
+      <workItem from="1581325717082" duration="15224000" />
+      <workItem from="1581408864924" duration="1423000" />
+      <workItem from="1581410866308" duration="22000" />
+      <workItem from="1581410913471" duration="5596000" />
+      <workItem from="1581423735094" duration="9493000" />
+      <workItem from="1581436156680" duration="1117000" />
+      <workItem from="1581438465557" duration="783000" />
+      <workItem from="1581586545381" duration="4423000" />
+      <workItem from="1581592743294" duration="3638000" />
+      <workItem from="1581671382976" duration="15908000" />
+      <workItem from="1581930180090" duration="19092000" />
+      <workItem from="1582016736196" duration="10917000" />
+      <workItem from="1582101918660" duration="21972000" />
+      <workItem from="1582189609912" duration="17779000" />
+      <workItem from="1582273022470" duration="17002000" />
+      <workItem from="1583138884246" duration="8589000" />
+      <workItem from="1583225121880" duration="1153000" />
+      <workItem from="1594221500725" duration="670000" />
     </task>
+    <task id="LOCAL-00001" summary="Changes 2.3.2020">
+      <created>1583167603625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583167603625</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes 2.3.2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 2.3.2020" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom" timestamp="1594222408780">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594222408780" />
+    <state width="1238" height="174" key="GridCell.Tab.0.center" timestamp="1594222408780">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594222408780" />
+    <state width="1238" height="174" key="GridCell.Tab.0.left" timestamp="1594222408779">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594222408779" />
+    <state width="1238" height="174" key="GridCell.Tab.0.right" timestamp="1594222408780">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594222408780" />
+    <state width="1238" height="174" key="GridCell.Tab.1.bottom" timestamp="1594222408782">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594222408782" />
+    <state width="1238" height="174" key="GridCell.Tab.1.center" timestamp="1594222408781">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1594222408781" />
+    <state width="1238" height="174" key="GridCell.Tab.1.left" timestamp="1594222408781">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1594222408781" />
+    <state width="1238" height="174" key="GridCell.Tab.1.right" timestamp="1594222408782">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1594222408782" />
+    <state width="1238" height="174" key="GridCell.Tab.2.bottom" timestamp="1594222408784">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.2.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594222408784" />
+    <state width="1238" height="174" key="GridCell.Tab.2.center" timestamp="1594222408783">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.2.center/0.0.1280.800@0.0.1280.800" timestamp="1594222408783" />
+    <state width="1238" height="174" key="GridCell.Tab.2.left" timestamp="1594222408783">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.2.left/0.0.1280.800@0.0.1280.800" timestamp="1594222408783" />
+    <state width="1238" height="174" key="GridCell.Tab.2.right" timestamp="1594222408784">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="174" key="GridCell.Tab.2.right/0.0.1280.800@0.0.1280.800" timestamp="1594222408784" />
   </component>
 </project>

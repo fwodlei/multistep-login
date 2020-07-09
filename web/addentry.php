@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+require_once('main.php');
+system_init();
+
 $u_id = $_SESSION['userid'];
 $a = 0;
 
@@ -51,10 +54,9 @@ if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
     }
     return (strpos($a, 'Senden') !== 0) && !is_numeric($a);
   });
-  $eintrag = "UPDATE info SET email='" . $filtered_array['email'] . "', vorname='" . $filtered_array['vorname'] . "', nachname='" . $filtered_array['name'] . "', info='" . $filtered_array['info'] . "' WHERE id = " . $id['id'];
+  $eintrag = "UPDATE info SET email='" . $filtered_array['email'] . "', vorname='" . $filtered_array['vorname'] . "', nachname='" . $filtered_array['name'] . "', info='" . $filtered_array['step-2'] . "' WHERE id = " . $id['id'];
   mysqli_query($db, $eintrag);
   mysqli_close($db);
-  print_r($eintrag);
 }
 
 if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
@@ -62,51 +64,73 @@ if (!empty($_SESSION['step-1']) && !empty($_SESSION['step-2'])) {
   unset( $_SESSION['vorname']);
   unset( $_SESSION['email']);
   unset( $_SESSION['step-1']);
-  unset( $_SESSION['info']);
+  unset( $_SESSION['options']);
   unset( $_SESSION['step-2']);
   unset( $_SESSION['id']);
 }
 
+$select = template_load('templates/form-select.php',[
+  'name' => 'step-2',
+  'info' => [
+    'a' => 'A',
+    'b' => 'B',
+    'c' => 'C',
+    'd' => 'D',
+    'e' => 'E'
+  ],
+]);
 
+$input = template_load('templates/form-input.php',[
+  'type' => 'text',
+  'name' => 'name',
+  'placeholder' => 'Name',
+]);
 
+$input2 = template_load('templates/form-input.php',[
+  'type' => 'text',
+  'name' => 'vorname',
+  'placeholder' => 'Vorname',
+]);
+
+$input3 = template_load('templates/form-input.php',[
+  'type' => 'text',
+  'name' => 'email',
+  'placeholder' => 'Email',
+]);
+
+$input4 = template_load('templates/form-input.php',[
+  'type' => 'submit',
+  'name' => 'step-1',
+  'value' => 'Submit',
+]);
 ?>
 
-  <!DOCTYPE html>
-  <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multistepform</title>
-  </head>
-  <body>
+<?php if (empty($_SESSION['step-1']) ): ?>
+  <div class="step-1">
+    <?php
+    print template_load('templates/form.php',[
+        'action' => 'addentry.php',
+        'method' => 'post',
+        'content' => [$input, $input2,  $input3, $input4],
+      ]
+    );
+    ?>
+    <a href="private.php">Zurück zum privaten Bereich.</a>
+  </div>
+<?php endif; ?>
 
-  <?php if (empty($_SESSION['step-1']) ): ?>
-    <div class="step-1">
-      <form action="./addentry.php" method="post">
-        <input name="name" placeholder="Name" type="text">
-        <input name="vorname" placeholder="Vorname" type="text">
-        <input name="email" placeholder="Email" type="email">
-        <input name="step-1" type="submit">
-        <a href="private.php">Zurück zum privaten Bereich.</a>
-      </form>
-    </div>
-  <?php endif; ?>
-
-  <?php if (empty($_SESSION['step-2']) && ! empty($_SESSION['step-1'])): ?>
-    <div class="step-2">
-      <form action="./addentry.php" method="post">
-        <select name="info">
-          <option name="Party">Party</option>
-          <option name="Arbeit">Arbeit</option>
-          <option name="Kirche">Kirche</option>
-        </select>
-        <input name="step-2" type="submit">
-      </form>
-    </div>
-  <?php endif; ?>
-  </body>
-  </html>
-
+<?php if (empty($_SESSION['step-2']) && ! empty($_SESSION['step-1'])): ?>
+  <div class="step-2">
+    <?php
+    print template_load('templates/form.php',[
+        'content' => [$select, $input4],
+        'action' => 'addentry.php',
+        'method' => 'post',
+      ]
+    );
+    ?>
+  </div>
+<?php endif; ?>
 <?php
 
 if(isset($_GET['d'])){
@@ -114,8 +138,7 @@ if(isset($_GET['d'])){
   unset( $_SESSION['vorname']);
   unset( $_SESSION['email']);
   unset( $_SESSION['step-1']);
-  unset( $_SESSION['info']);
+  unset( $_SESSION['options']);
   unset( $_SESSION['step-2']);
   unset( $_SESSION['id']);
 }
-?>
